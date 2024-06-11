@@ -1,6 +1,6 @@
 from requests import get
 
-URL: str = 'https://api.quotable.io/quotes/random?limit=50'
+URL: str = 'https://api.quotable.io/quotes/random?tags=famous-quotes&limit=50'
 
 
 def getQuoteList():

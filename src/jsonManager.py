@@ -7,3 +7,8 @@ def cleanAttributes(quoteList: list):
         del quote["dateAdded"]
         del quote["dateModified"]
     return quoteList
+
+
+def deleteRepeated(quoteList: list):
+    unique_data_dict = {item['id']: item for item in quoteList}
+    return list(unique_data_dict.values())
