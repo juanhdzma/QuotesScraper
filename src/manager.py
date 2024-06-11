@@ -1,6 +1,6 @@
 from typing import Counter
 from requestManager import getQuoteList
-from jsonManager import cleanAttributes, deleteRepeated
+from jsonManager import cleanAttributes, deleteRepeated, changeID
 from fileManager import generateFile, readFile
 from quoteClassificator import assignCategory
 
@@ -28,3 +28,9 @@ def categorizeQuotes():
 
     count = Counter(quote["category"] for quote in categorizedData)
     print(count)
+
+
+def regenerateID():
+    file = readFile('quotes.json')
+    jsonData = changeID(file)
+    generateFile(jsonData, 'final.json')

@@ -19,3 +19,7 @@ scrape:
 categorize:
 	@echo 'Executing the categorize script, wait ...'
 	@python src/main.py "categorize"
+
+id:
+	@echo 'Executing the id script, wait ...'
+	@python src/main.py "id"

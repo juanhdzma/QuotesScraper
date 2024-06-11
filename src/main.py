@@ -1,5 +1,5 @@
 import sys
-from manager import scrapeQuotes, categorizeQuotes
+from manager import scrapeQuotes, categorizeQuotes, regenerateID
 
 
 def main():
@@ -12,6 +12,8 @@ def main():
         scrapeQuotes()
     elif task_name == 'categorize':
         categorizeQuotes()
+    elif task_name == 'id':
+        regenerateID()
     else:
         print("Not a valid task_name")
         return
